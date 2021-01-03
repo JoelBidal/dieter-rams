@@ -1,0 +1,235 @@
+body{
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	overflow: hidden;
+}
+
+.collapse{
+	justify-content: center;
+	width: 25%;
+}
+
+.navbar{
+	width: 100%;
+	height: 60px;
+	background: none;
+    display: flex;  /*Cambiar a flex */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+	z-index: 1001;
+}
+
+.navbar a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar .nav-name{
+	font-weight: 600;
+	font-size: 1.6rem;
+	letter-spacing: 0;
+}
+
+.navbar .nav-name:hover{
+	text-decoration: overline;
+}
+
+.icons{
+    width: 25%;
+    display: flex;
+	justify-content: space-around;
+	font-size: 1.2rem;
+}
+
+.icons .fas{
+	color: #fff;
+}
+
+.collapse .nav-items{
+	width: 25%;
+}
+
+.collapse .nav-items .nav-link{
+	color: #fff;
+	font-weight: 200;
+	font-size: 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+	color: #fff;
+	text-decoration: line-through;
+}
+
+.nav-items{
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav-name{
+	width: 40%;
+    text-align: center;
+}
+
+
+/* Carousel Bootstrap */
+.background{
+	max-width: 100%;
+}
+
+.carousel-inner{
+	height: 100vh;
+}
+
+.carousel-control-prev, .carousel-control-next{
+	text-decoration: none;
+}
+
+.avance{
+	font-size: 1.4rem;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+.carousel-caption{
+	bottom: 50%;
+}
+
+.subtitle{
+	font-size: 2.3rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+form i{
+	font-size: .9rem;
+}
+
+input[type=text]{
+	border: none;
+    background: none;
+	color: #fff;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+::placeholder{
+	font-size: .9rem;
+	font-weight: 100;
+	color: #fff;
+	border-bottom: .01rem solid #fff;
+}
+
+input:active, input:focus{
+	outline: none;
+}
+
+.info-chair{
+	width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    display: flex;
+	justify-content: flex-end;
+	z-index: 1001;
+}
+
+.info-chair div h2{
+	font-size: 1.5rem;
+	font-weight: 100;
+	margin-bottom: .5rem;
+}
+
+.info-chair div h4{
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.info-chair div p{
+	font-size: 1rem;
+	font-weight: 200;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 992px) and (min-width: 320px){
+
+	/* Background image */
+	.background{
+		height: 100vh;
+		max-width: inherit;
+	}
+
+	.bkg-1{
+		position: relative;
+		z-index: -1;
+		right: 168%;
+	}
+
+	.bkg-2{
+		position: relative;
+		z-index: -1;
+		right: 100%;
+	}
+
+
+	.carousel-control-prev, .carousel-control-next,
+	.navbar-brand {
+		display: none;
+	}
+
+	.carousel-caption .subtitle{
+		margin-bottom: 0;
+	}
+
+
+	/* Collapse Menu */
+	.collapse .nav-items{
+		width: auto;
+		display: block;
+	}
+
+	.navbar-light .navbar-toggler{
+		border-color: transparent;
+	}
+
+	.nav-name{
+		margin-right: 40px;
+	}
+
+	.container-fluid{
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar-collapse{
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+	}
+
+	.collapse .nav-items{
+		margin: 30px 0 0 30px;
+	}
+
+	.collapse .nav-items .nav-link{
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: rgb(107, 107, 107);
+	}
+	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+		color: rgb(107, 107, 107);
+		text-decoration: line-through;
+	}
+
+
+	/* Info chair */
+	.info-chair{
+		justify-content: center;
+		right: 0;
+	}
+} 
