@@ -11,13 +11,13 @@ body{
 
 .navbar{
 	width: 100%;
-	height: 60px;
 	background: none;
-    display: flex;  /*Cambiar a flex */
+    display: flex; 
     justify-content: center;
     align-items: center;
     position: absolute;
 	z-index: 1001;
+	padding-bottom: 0;
 }
 
 .navbar a{
@@ -72,7 +72,7 @@ body{
     text-align: center;
 }
 
-/* Carousel Bootstrap */
+/*///////////////// Carousel BS /////////////////*/
 .background{
 	max-width: 100%;
 }
@@ -204,6 +204,7 @@ input:active, input:focus{
 .ten-principles-box h4{
 	font-size: 2rem;
 	font-weight: 500;
+	line-height: 2.5rem;
 	margin-bottom: 35px;
 }
 
@@ -278,7 +279,6 @@ input:active, input:focus{
 
 .container-chairs{
     width: 40%;
-    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,7 +292,6 @@ input:active, input:focus{
 .container-chairs:hover{
     transform: scale(1.02);
 }
-
 
 .container-chairs p{
 	font-size: .9rem;
@@ -313,7 +312,7 @@ input:active, input:focus{
     text-decoration: line-through;
 }
 
-/* Mobile */
+/*///////////////// Mobile /////////////////*/
 @media screen and (max-width: 992px) and (min-width: 320px){
 	/* Background image */
 	.background{
@@ -333,7 +332,6 @@ input:active, input:focus{
 		right: 100%;
 	}
 
-
 	.carousel-control-prev, .carousel-control-next,
 	.navbar-brand {
 		display: none;
@@ -343,11 +341,21 @@ input:active, input:focus{
 		margin-bottom: 0;
 	}
 
+	/*///////////////// Collapse Menu /////////////////*/
+	.background-collapse{
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+		background-color: #fff;
+	}
 
-	/* Collapse Menu */
+	.navbar-toggler .fa-bars{
+		color: #fff;
+	}
+
 	.collapse .nav-items{
-		width: auto;
-		display: block;
+		width: 100%;
+		justify-content: flex-start;
 	}
 
 	.navbar-light .navbar-toggler{
@@ -365,17 +373,12 @@ input:active, input:focus{
 
 	.navbar-collapse{
 		width: 100%;
-		height: 100vh;
 		background-color: #fff;
-	}
-
-	.collapse .nav-items{
-		margin: 30px 0 0 30px;
+		margin-top: 10px;
+		padding-top: 20px;
 	}
 
 	.collapse .nav-items .nav-link{
-		font-size: 1.3rem;
-		font-weight: 500;
 		color: rgb(107, 107, 107);
 	}
 	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
@@ -384,13 +387,13 @@ input:active, input:focus{
 	}
 
 
-	/* Info chair */
+	/*///////////////// Chairs styles /////////////////*/
 	.info-chair{
 		justify-content: center;
 		right: 0;
 	}
 
-	/* About view styles */
+	/*///////////////// About styles /////////////////*/
 	.box-about{
 		flex-direction: column;
 	}
@@ -409,7 +412,7 @@ input:active, input:focus{
 		margin-bottom: 40px;
 	}
 
-	.container-about{
+	.container-chairs{
         width: 80%;
     }
 } 
